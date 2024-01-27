@@ -1,0 +1,79 @@
+@use "../../themes/themes.scss";
+
+.navbar {
+  height: 7vh;
+  padding: 1rem 2rem;
+  background-color: themes.$primary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-title,
+.navbar-link,
+.navbar-dropdown-link {
+  text-decoration: none;
+  padding: 0.25rem 0.65rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-link,
+.navbar-title {
+  color: themes.$text-color-light;
+}
+
+.navbar-dropdown-link {
+  color: themes.$primary;
+}
+
+.navbar-dropdown-title {
+  padding: 0.25rem 0.65rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: themes.$text-color-light;
+}
+
+.navbar-dropdown-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-dropdown-menu {
+  position: absolute;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); // Add this line
+}
+
+.navbar-link:hover,
+.navbar-dropdown-container:hover {
+  border-radius: 1rem;
+  background-color: white;
+  color: themes.$primary;
+}
+
+.navbar-dropdown-container:hover {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.navbar-dropdown-container:hover .navbar-dropdown-title {
+  color: themes.$primary;
+}
+
+.navbar-dropdown-container:hover .navbar-dropdown-menu {
+  display: flex;
+}

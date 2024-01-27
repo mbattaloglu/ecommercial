@@ -1,0 +1,17 @@
+@use "../../themes/themes.scss";
+
+.input-container {
+  padding: 1rem;
+}
+
+.input {
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.1rem;
+  width: 20rem;
+  height: 3rem;
+  background-color: themes.$input-background-color;
+  color: themes.$text-color-dark;
+  border-radius: 0.5rem;
+}

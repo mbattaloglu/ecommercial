@@ -1,0 +1,17 @@
+@use "../../themes/themes.scss";
+
+.primary {
+  background-color: themes.$primary;
+}
+
+.accept {
+  background-color: themes.$accept;
+}
+
+.danger {
+  background-color: themes.$danger;
+}
+
+.warn {
+  background-color: themes.$warn;
+}

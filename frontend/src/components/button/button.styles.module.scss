@@ -1,0 +1,12 @@
+@use "../../themes/themes.scss";
+
+.button {
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  color: themes.$text-color-light;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}

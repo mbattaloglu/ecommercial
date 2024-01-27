@@ -1,0 +1,42 @@
+@use "../themes/themes.scss";
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.primary-text {
+  color: themes.$primary;
+}
+
+.link-container {
+  margin: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: themes.$primary;
+}
+
+.shadowed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
