@@ -3,7 +3,7 @@ import Login from "./pages/login/login.page";
 import Signin from "./pages/signin/signin.page";
 import Home from "./pages/home/home.page";
 import NotFound from "./pages/not-found/not-found.page";
-import Navbar from "./components/navbar/navbar.component";
+import { Navbar } from "./components/navbar/navbar.component";
 import appStyles from "./styles/app.styles.module.scss";
 import Logout from "./pages/logout/logout.page";
 

@@ -1,10 +1,10 @@
-import appStyles from "../../styles/app.styles.module.scss";
+import { PageContainerFluid } from "../../layouts/containers/page-container-fluid/page-fluid.container";
 
 const Home: React.FC = () => {
   return (
-    <div className={appStyles["page-container"]}>
+    <PageContainerFluid>
       <h1>Home</h1>
-    </div>
+    </PageContainerFluid>
   );
 };
 

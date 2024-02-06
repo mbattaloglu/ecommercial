@@ -10,12 +10,23 @@
   flex-grow: 1;
 }
 
-.container {
+.base-container {
+  height: 100%;
+}
+
+.container-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+}
+
+.container {
+  padding: 2rem 10rem;
+}
+
+.container-fluid {
+  padding: 2rem;
 }
 
 .primary-text {

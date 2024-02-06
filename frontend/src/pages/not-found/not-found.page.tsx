@@ -1,10 +1,10 @@
-import appStyles from "../../styles/app.styles.module.scss";
+import { PageCentralContainer } from "../../layouts/containers/page-container-central/page-central.container";
 
 const NotFound: React.FC = () => {
   return (
-    <div className={appStyles["page-container"]}>
+    <PageCentralContainer>
       <h1>NotFound</h1>
-    </div>
+    </PageCentralContainer>
   );
 };
 

@@ -3,7 +3,7 @@ import styles from "./navbar.styles.module.scss";
 import { useContext } from "react";
 import { UserContext } from "../../contexts/userContext/userContext";
 
-const Navbar: React.FC = () => {
+export const Navbar: React.FC = () => {
   const userContext = useContext(UserContext);
   const { user } = userContext;
 
@@ -31,5 +31,3 @@ const Navbar: React.FC = () => {
     </nav>
   );
 };
-
-export default Navbar;
