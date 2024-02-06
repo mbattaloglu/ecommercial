@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
       ) : (
         <div className={styles["navbar-dropdown-container"]}>
           <p className={styles["navbar-dropdown-title"]}>
-            Welcome, {user.name}
+            Welcome, {user.firstName}
           </p>
           <div className={styles["navbar-dropdown-menu"]}>
             <Link className={styles["navbar-dropdown-link"]} to={"/logout"}>

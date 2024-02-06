@@ -42,8 +42,8 @@ export const sendRequest = async (
       }
     case "signin":
       const signinCredentials = [
-        "name",
-        "surname",
+        "firstName",
+        "lastName",
         "username",
         "email",
         "password",

@@ -7,8 +7,8 @@ import appStyles from "../../../styles/app.styles.module.scss";
 import { sendRequest } from "../../../utils/sendRequest/sendRequest";
 
 export const SigninForm: React.FC = () => {
-  const [name, setName] = useState<string>("");
-  const [surname, setSurname] = useState<string>("");
+  const [firstName, setFistName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
   const [username, setUsername] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -20,13 +20,13 @@ export const SigninForm: React.FC = () => {
   const navigate = useNavigate();
 
   const handleSignIn = async (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("name", name);
-    formData.append("surname", surname);
+    formData.append("firstName", firstName);
+    formData.append("lastName", lastName);
     formData.append("username", username);
     formData.append("email", email);
     formData.append("password", password);
@@ -34,7 +34,7 @@ export const SigninForm: React.FC = () => {
       "birthDate",
       `${birthDate.getFullYear()}/${
         birthDate.getMonth() + 1
-      }/${birthDate.getDate()}`,
+      }/${birthDate.getDate()}`
     );
 
     await sendRequest(formData, "signin").then((res) => {
@@ -42,9 +42,10 @@ export const SigninForm: React.FC = () => {
       if (res.success) {
         setTimeout(() => {
           setUser({
-            name: name,
-            surname: surname,
+            firstName: firstName,
+            lastName: lastName,
             email: email,
+            username: username,
             birthDate: birthDate,
           });
           navigate("/");
@@ -56,21 +57,21 @@ export const SigninForm: React.FC = () => {
     <form className={appStyles["shadowed-container"]}>
       <h1 className={appStyles["primary-text"]}>Sign In</h1>
       <InputArea
-        title="Name"
+        title="Fist Name"
         type="text"
-        id="name"
-        name="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
+        id="firstName"
+        name="firstName"
+        value={firstName}
+        onChange={(e) => setFistName(e.target.value)}
         required
       />
       <InputArea
-        title="Surname"
+        title="Last Name"
         type="text"
-        id="surname"
-        name="surname"
-        value={surname}
-        onChange={(e) => setSurname(e.target.value)}
+        id="lastName"
+        name="lastName"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
         required
       />
       <InputArea

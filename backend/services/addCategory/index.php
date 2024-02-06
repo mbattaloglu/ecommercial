@@ -1,6 +1,6 @@
 <?php
 
-include("../__config__/config.php");
+require "../../config/config.php";
 
 try {
     $categoryName = $_POST["categoryName"];
